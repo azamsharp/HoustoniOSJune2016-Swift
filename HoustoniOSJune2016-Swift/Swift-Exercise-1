@@ -2,11 +2,7 @@
 
 import UIKit
 
-// declare a constant called temperature and assign its initial value to be 85
-let temperature = 85
-
 // declare a constant named city and assign initial value to be "Houston"
-
 
 // declare a constant named state and assign initial value to be "Texas"
 
@@ -18,7 +14,6 @@ let temperature = 85
 
 // declare a constant called fullName which is the concatentation of firstName and lastName. Example "John Doe" when appending firstName and lastName together
 
-
 // use a string literal to print the values of city and temperature
 // Example: The temperature in Houston is 85
 // Use the city and temperature variables declared above in your string literals
@@ -26,9 +21,7 @@ let temperature = 85
 
 // create an array called cities and populate with the following "Houston", "Austin", "San Antonio", "Dallas"
 
-
 // Change the "San Antonio" value to be "Sugarland"
-
 
 // create a String array called names of populate with the following names
 // "John", "Mary", "Alex","Jack"
@@ -38,9 +31,7 @@ let temperature = 85
 
 // iterate through the names array and print out all the names
 
-
 // iterate through the cities array and print each city name after appending the state name. Example "Houston, TX"
-
 
 // create a dictionary and initialize it with the following:
 // Dictionary[String:String]
@@ -51,9 +42,7 @@ let temperature = 85
 
 // print the value of the key "Houston"
 
-
 // iterate through the dictionary and print all the values of the airports
-
 
 // create a function called greet which prints "greetings to you" message
 
@@ -61,10 +50,7 @@ let temperature = 85
 
 // create a function called add which take two arguments of type int and returns the sum of ints
 
-
 // call the function add and pass the following arguments (2,5)
-
-
 
 // create a class called Person with the following properties
 // firstName :String
@@ -74,6 +60,19 @@ let temperature = 85
 // create the object of the class Person and assign the properties firstName and lastName with "John" and "Doe"
 
 
+
+
+NSLog(@"My name is %@ and my age is %d",name,age);
+
+
+
+// for loop
+
+for(int i = 0; i<=5; i++) {
+
+    // do this 5 times
+
+ }
 
 
 

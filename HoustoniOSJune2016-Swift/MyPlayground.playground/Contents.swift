@@ -2,76 +2,241 @@
 
 import UIKit
 
-// declare a constant called temperature and assign its initial value to be 85
-let temperature = 86
+// defining a constant
+let name = "John Doe"
 
-// declare a constant named city and assign initial value to be "Houston"
+// defining a variable
+var age = 20
+age = 21
 
+print("My name is \(name) and my age is \(age)")
 
-// declare a constant named state and assign initial value to be "Texas"
+var season = "Spring"
 
-// declare a var named zipcode and assign initial value to be 77042
+let language :String?
 
-// declare a constant called firstName and assign its initial value "John"
+language = "English"
 
-// declare a constant called lastName and assign its initial value "Doe"
+print(language!)
 
-// declare a constant called fullName which is the concatentation of firstName and lastName. Example "John Doe" when appending firstName and lastName together
+let noOfCarsInHouston :Int?
 
+noOfCarsInHouston = 230
 
-// use a string literal to print the values of city and temperature
-// Example: The temperature in Houston is 85
-// Use the city and temperature variables declared above in your string literals
+// unwrap the option
+print(noOfCarsInHouston!)
+print(season)
 
-
-// create an array called cities and populate with the following "Houston", "Austin", "San Antonio", "Dallas"
-
-
-// Change the "San Antonio" value to be "Sugarland"
-
-
-// create a String array called names of populate with the following names
-// "John", "Mary", "Alex","Jack"
-// make sure that the names array can only hold String values
-// The following should not work
-// let names = ["John","Mary","Alex",34]
-
-// iterate through the names array and print out all the names
+//let firstName :String!
 
 
-// iterate through the cities array and print each city name after appending the state name. Example "Houston, TX"
+var cities :[String] = ["Houston","Austin","Dallas","San Antonio"]
 
+let placesToVisit = ["Costa Rica","USA","Asia"]
 
-// create a dictionary and initialize it with the following:
-// Dictionary[String:String]
+cities.append("San Jose")
 
-//  key = Houston   value = IAH
-// key = Costa Rica   value = San Jose Airport
-// key = Las Angelos   value = LAX Airport
+cities[1] = "San Francisco"
+cities[0] = "Denver"
 
-// print the value of the key "Houston"
+cities
 
+cities.count
 
-// iterate through the dictionary and print all the values of the airports
+// for loop 
 
+for cityName in cities {
+    cityName + ", " + "USA"
+}
 
-// create a function called greet which prints "greetings to you" message
+cities.indexOf("Denver")
 
-// call the function greet
-
-// create a function called add which take two arguments of type int and returns the sum of ints
-
-
-// call the function add and pass the following arguments (2,5)
+let firstName = "John"
+let lastName = "Doe"
+let fullName = firstName + ", " + lastName
 
 
 
-// create a class called Person with the following properties
-// firstName :String
-// lastName :String
+let airports = ["Alberton":"AIL","Houston":"IAH","Las Angelos":"LAX","Greenville":"GSP"]
+
+airports["Houston"]
+airports["Costa Rica"]
+
+// iterate through the dictionary 
+
+for (city,airportCode) in airports {
+    print("key = \(city) and value = \(airportCode)")
+}
 
 
-// create the object of the class Person and assign the properties firstName and lastName with "John" and "Doe"
+let scores = ["USA":23,"JAPAN":19,"FRANCE":45]
+scores
+
+// functions 
+
+func greet() {
+    print("hello")
+}
+
+greet()
+
+func display(name :String) {
+    
+    // if you want to change the variable
+    var someName = name
+    someName = "Mary"
+    
+    print(name)
+}
+
+display("John Doe")
+
+func verifyAge(name :String, age :Int) {
+    
+}
+
+verifyAge("John Doe", age: 20)
+
+func add(a :Int, b:Int) -> Int {
+    return a+b
+}
+
+let result = add(2, b: 4)
+
+func isPalindrom(userInput :String) -> Bool {
+    return false
+}
+
+// classes 
+
+class Person {
+    
+    var firstName :String
+    var lastName :String
+    var age :Int
+    
+    init() {
+
+        // commenting out block of code and uncommenting out the block of code
+        //    
+        // Command plus - plus /
+        
+        self.firstName = ""
+        self.lastName = ""
+        self.age = 10
+        
+    }
+    
+    init(firstName :String, lastName :String) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.age = 10
+    }
+    
+    init(firstName :String,lastName: String, age:Int) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.age = age
+    }
+}
+
+let somePersonObject = Person()
+
+let someOtherPerson = Person()
+someOtherPerson.firstName = "Mary"
+someOtherPerson.lastName = "Kate"
+
+let person = Person(firstName: "John", lastName: "Doe")
+
+let anotherPerson = Person(firstName: "John", lastName: "Doe", age: 29)
+
+person.firstName
+person.lastName
+person.age
+
+anotherPerson.age
+
+
+class Calculator {
+    
+    func add(a :Int, b:Int) -> Int {
+        return a + b
+    }
+}
+
+let someString :NSString = "asdasd"
+
+
+let calculator = Calculator()
+
+calculator.add(2, b: 6)
+
+class Animal {
+    
+    func sleep() {
+        print("Animal is sleeping")
+    }
+    
+    func walk() {
+        print("Animal is walking")
+    }
+    
+}
+
+
+
+class Cat : Animal {
+    
+    override func sleep() {
+        print("Cat is sleeping")
+    }
+    
+    override func walk() {
+        print("Cat is walking")
+    }
+    
+}
+
+let cat = Cat()
+cat.sleep()
+cat.walk()
+
+
+// protocols 
+
+class Bird {
+ 
+   
+}
+
+protocol Flyable {
+    func fly()
+}
+
+class Sparrow : Flyable {
+    
+    func fly() {
+         print("I can fly")
+    }
+}
+
+class Eagle : Bird, Flyable {
+    
+    func fly() {
+        print("I can fly")
+    }
+}
+
+class Kiwi : Bird {
+    
+}
+
+let s = Sparrow()
+s.fly()
+
+
+
+
 
 
 
