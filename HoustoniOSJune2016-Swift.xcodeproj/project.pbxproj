@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3432833E1D34057F00621E14 /* HelloWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432833D1D34057F00621E14 /* HelloWorldViewController.swift */; };
 		3446340E1D33219400641E0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446340D1D33219400641E0B /* AppDelegate.swift */; };
 		344634101D33219400641E0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3446340F1D33219400641E0B /* ViewController.swift */; };
 		344634131D33219400641E0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344634111D33219400641E0B /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		3432833A1D33E76900621E14 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		3432833B1D3404AC00621E14 /* Swift-Exercise-Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Swift-Exercise-Playground.playground"; sourceTree = "<group>"; };
+		3432833D1D34057F00621E14 /* HelloWorldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorldViewController.swift; sourceTree = "<group>"; };
 		3446340A1D33219400641E0B /* HoustoniOSJune2016-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HoustoniOSJune2016-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3446340D1D33219400641E0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3446340F1D33219400641E0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3432833C1D34056600621E14 /* HelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				3432833D1D34057F00621E14 /* HelloWorldViewController.swift */,
+			);
+			name = HelloWorld;
+			sourceTree = "<group>";
+		};
 		344634011D33219400641E0B = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +82,7 @@
 		34FCF84B1D3321B200F65526 /* Week 1 */ = {
 			isa = PBXGroup;
 			children = (
+				3432833C1D34056600621E14 /* HelloWorld */,
 				34FCF84D1D3321F600F65526 /* Playgrounds */,
 			);
 			name = "Week 1";
@@ -81,6 +93,7 @@
 			children = (
 				34FCF84E1D33226600F65526 /* Swift-Exercise-1 */,
 				3432833A1D33E76900621E14 /* MyPlayground.playground */,
+				3432833B1D3404AC00621E14 /* Swift-Exercise-Playground.playground */,
 			);
 			name = Playgrounds;
 			sourceTree = "<group>";
@@ -159,6 +172,7 @@
 			files = (
 				344634101D33219400641E0B /* ViewController.swift in Sources */,
 				3446340E1D33219400641E0B /* AppDelegate.swift in Sources */,
+				3432833E1D34057F00621E14 /* HelloWorldViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
