@@ -1,0 +1,114 @@
+//: Playground - noun: a place where people can play
+
+import UIKit
+
+// exception handling
+
+enum DebitCardError :ErrorType {
+case InvalidPin
+case InsufficientFunds(amount :Double)
+}
+
+class DebitCard {
+
+var number :String!
+var pin :String!
+var balance :Double!
+
+init(number :String, pin :String, balance :Double) {
+self.number = number
+self.pin = pin
+self.balance = balance
+}
+
+func swipe() throws {
+
+if self.pin != "2345" {
+throw DebitCardError.InvalidPin
+}
+}
+}
+
+
+let card = DebitCard(number: "1234", pin: "2312", balance: 1000)
+
+do {
+try card.swipe()
+}
+catch DebitCardError.InvalidPin {
+// invalid pin error
+}
+catch {
+// all errors
+}
+
+// availability API
+
+@available(iOS 9, *)
+func iOSMethod() {
+print("do something on iOS 9")
+}
+
+iOSMethod()
+
+// guard
+
+let name :String?
+name = "John Doe"
+
+guard let name = name else {
+fatalError("error occured")
+}
+
+print(name)
+
+// loops
+
+
+class Person {
+
+var address :Address?
+}
+
+class Address {
+
+var street :String?
+}
+
+let person = Person()
+person.address = Address()
+person.address?.street = "Richmond Ave"
+
+if person.address != nil {
+if person.address?.street != nil {
+print((person.address?.street)!)
+}
+}
+
+// using if - let
+
+if let address = person.address {
+if let streetName = address.street {
+print(streetName)
+}
+}
+
+// using guard
+
+guard let add = person.address, let streetName = add.street
+where streetName.characters.count > 10
+
+else {
+fatalError("not available")
+}
+
+print(add)
+print(streetName)
+
+
+
+
+
+
+
+

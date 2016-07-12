@@ -1,0 +1,57 @@
+//
+//  GraphView.swift
+//  HoustoniOSJune2016-Swift
+//
+//  Created by Mohammad Azam on 7/12/16.
+//  Copyright © 2016 Mohammad Azam. All rights reserved.
+//
+
+import UIKit
+
+@IBDesignable
+class GraphView: UIView {
+
+@IBInspectable var cornerRadius :CGFloat = 0 {
+didSet {
+self.layer.cornerRadius = cornerRadius
+self.layer.masksToBounds = true
+}
+}
+
+override init(frame: CGRect) {
+super.init(frame: frame)
+}
+
+required init?(coder aDecoder: NSCoder) {
+super.init(coder: aDecoder)
+}
+
+
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+override func drawRect(rect: CGRect) {
+// Drawing code
+
+let circle = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 100, height: 100))
+UIColor.greenColor().setFill()
+UIColor.redColor().setStroke()
+circle.fill()
+
+let anotherCircle = UIBezierPath(ovalInRect: CGRect(x: 10,y: 10,width: 30,height: 30))
+UIColor.orangeColor().setFill()
+anotherCircle.fill()
+
+let path = UIBezierPath()
+UIColor.blueColor().setStroke()
+UIColor.brownColor().setFill()
+path.moveToPoint(CGPoint(x: 100, y: 100))
+path.addLineToPoint(CGPoint(x: 100,y: 200))
+path.addLineToPoint(CGPoint(x: 100,y: 200))
+
+path.stroke()
+path.closePath()
+
+}
+
+
+}
