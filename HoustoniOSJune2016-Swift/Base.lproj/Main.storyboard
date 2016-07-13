@@ -28,13 +28,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-Q6-tDQ">
                                 <rect key="frame" x="20" y="28" width="560" height="514"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWz-tE-QRa">
+                                <rect key="frame" x="20" y="562" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="trP-tL-eHe"/>
+                                </constraints>
+                                <state key="normal" title="Sepia"/>
+                                <connections>
+                                    <action selector="applySepiaFiler" destination="Hjb-0F-QZo" eventType="touchUpInside" id="Ep4-nn-Xxm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hCk-9t-fp8" firstAttribute="centerX" secondItem="gz4-pD-8tj" secondAttribute="centerX" id="5Uo-C4-yXg"/>
                             <constraint firstItem="0fg-Q6-tDQ" firstAttribute="top" secondItem="VY3-LG-M9L" secondAttribute="bottom" constant="8" symbolic="YES" id="FFl-Rb-tba"/>
+                            <constraint firstItem="aWz-tE-QRa" firstAttribute="leading" secondItem="0fg-Q6-tDQ" secondAttribute="leading" id="SXv-7e-hpu"/>
                             <constraint firstItem="hCk-9t-fp8" firstAttribute="top" secondItem="0fg-Q6-tDQ" secondAttribute="bottom" constant="8" symbolic="YES" id="YHJ-fp-9Qh"/>
                             <constraint firstAttribute="bottom" secondItem="hCk-9t-fp8" secondAttribute="bottom" constant="20" symbolic="YES" id="kuD-sl-Fgm"/>
+                            <constraint firstItem="whw-Qj-G9d" firstAttribute="top" secondItem="aWz-tE-QRa" secondAttribute="bottom" constant="8" symbolic="YES" id="qb4-aw-BEf"/>
                             <constraint firstItem="0fg-Q6-tDQ" firstAttribute="leading" secondItem="gz4-pD-8tj" secondAttribute="leadingMargin" id="sJs-YY-yl4"/>
                             <constraint firstItem="0fg-Q6-tDQ" firstAttribute="centerX" secondItem="hCk-9t-fp8" secondAttribute="centerX" id="tfd-9t-fIg"/>
                         </constraints>

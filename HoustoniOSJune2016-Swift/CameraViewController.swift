@@ -7,22 +7,44 @@
 //
 
 import UIKit
+import CoreImage
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var photoImageView :UIImageView!
+    var originalImage :UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func applySepiaFiler() {
+        
+        let image = self.originalImage
+        
+        let beginImage = CIImage(image: image)
+        
+        guard let sepiaFilter = CIFilter(name: "CISepiaTone") else {
+            fatalError("Error creating Sepia Filter")
+        }
+        
+        sepiaFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        sepiaFilter.setValue(1.0, forKey:kCIInputIntensityKey)
+        
+        let newImage = UIImage(CIImage: (sepiaFilter.outputImage)!)
+        
+        self.photoImageView.image = newImage
+        
+//        dispatch_async(dispatch_get_main_queue()) {
+//            self.photoImageView.image = newImage
+//        }
     }
     
     @IBAction func openCameraButtonPressed() {
@@ -38,7 +60,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             self.presentViewController(imagePickerViewController, animated: true, completion: nil)
             
             print("You selected to pick from library")
-            
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (alert :UIAlertAction) in
@@ -64,9 +85,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
-        let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+         self.originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage
         
-        self.photoImageView.image = originalImage
+        self.photoImageView.image = self.originalImage
         
         picker.dismissViewControllerAnimated(true, completion: nil)
         
