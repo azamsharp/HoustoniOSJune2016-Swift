@@ -1,0 +1,18 @@
+@IBAction func applySepiaFiler() {
+
+let image = self.photoImageView.image!
+let beginImage = CIImage(image: image)
+
+guard let sepiaFilter = CIFilter(name: "CISepiaTone") else {
+fatalError("Error creating Sepia Filter")
+}
+
+sepiaFilter.setValue(beginImage, forKey: kCIInputImageKey)
+sepiaFilter.setValue(2.5, forKey:kCIInputIntensityKey)
+
+let newImage = UIImage(CIImage: (sepiaFilter.outputImage)!)
+
+dispatch_async(dispatch_get_main_queue()) {
+self.photoImageView.image = newImage
+}
+}

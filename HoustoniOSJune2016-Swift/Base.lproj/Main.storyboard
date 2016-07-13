@@ -1,10 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AIB-sJ-iBx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hjb-0F-QZo">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="HJX-wN-1vn">
+            <objects>
+                <viewController id="Hjb-0F-QZo" customClass="CameraViewController" customModule="HoustoniOSJune2016_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VY3-LG-M9L"/>
+                        <viewControllerLayoutGuide type="bottom" id="whw-Qj-G9d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gz4-pD-8tj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCk-9t-fp8">
+                                <rect key="frame" x="253" y="550" width="95" height="30"/>
+                                <state key="normal" title="Open Camera"/>
+                                <connections>
+                                    <action selector="openCameraButtonPressed" destination="Hjb-0F-QZo" eventType="touchUpInside" id="xur-IU-JBL"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-Q6-tDQ">
+                                <rect key="frame" x="20" y="28" width="560" height="514"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hCk-9t-fp8" firstAttribute="centerX" secondItem="gz4-pD-8tj" secondAttribute="centerX" id="5Uo-C4-yXg"/>
+                            <constraint firstItem="0fg-Q6-tDQ" firstAttribute="top" secondItem="VY3-LG-M9L" secondAttribute="bottom" constant="8" symbolic="YES" id="FFl-Rb-tba"/>
+                            <constraint firstItem="hCk-9t-fp8" firstAttribute="top" secondItem="0fg-Q6-tDQ" secondAttribute="bottom" constant="8" symbolic="YES" id="YHJ-fp-9Qh"/>
+                            <constraint firstAttribute="bottom" secondItem="hCk-9t-fp8" secondAttribute="bottom" constant="20" symbolic="YES" id="kuD-sl-Fgm"/>
+                            <constraint firstItem="0fg-Q6-tDQ" firstAttribute="leading" secondItem="gz4-pD-8tj" secondAttribute="leadingMargin" id="sJs-YY-yl4"/>
+                            <constraint firstItem="0fg-Q6-tDQ" firstAttribute="centerX" secondItem="hCk-9t-fp8" secondAttribute="centerX" id="tfd-9t-fIg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="0fg-Q6-tDQ" id="dTD-SA-AER"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GkS-xW-5LA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16" y="194"/>
+        </scene>
         <!--Hello World View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -45,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="374"/>
+            <point key="canvasLocation" x="672" y="213"/>
         </scene>
         <!--Availability View Controller-->
         <scene sceneID="xmi-HV-rtx">

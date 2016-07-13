@@ -1,7 +1,10 @@
 
 // Swift 2 New Features 
 
-// Exception Handling 
+// Exception Handling
+
+import XCPlayground
+import UIKit
 
 enum Compus {
     case North
@@ -118,6 +121,86 @@ let customerName = "John Doe"
 customerName.reverse()
 
 "Hello World".reverse()
+
+
+// Home Assignment
+
+
+class GraphView : UIView {
+    
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame)
+        
+        setup()
+        
+    }
+    
+    private func setup() {
+        
+        UIColor(red: 120/255, green: 100/255, blue: 234/255, alpha: 1).setFill()
+        
+        print("hello world")
+        
+        let points :[CGPoint] = [CGPoint(x:10, y:20),CGPoint(x:20,y:40)]
+        
+        UIColor.greenColor().setStroke()
+        UIColor.redColor().setFill()
+        
+        let line = UIBezierPath()
+        
+        line.moveToPoint(CGPoint(x: 0, y: 0))
+        
+        for point in points {
+            
+            UIColor.greenColor().setFill()
+            let circle = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 100, height: 100))
+            
+            circle.fill()
+            
+            line.addLineToPoint(point)
+        }
+        
+        line.stroke()
+        line.closePath()
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+}
+
+let graphView = GraphView(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
+graphView.backgroundColor = UIColor.purpleColor()
+
+
+XCPlaygroundPage.currentPage.liveView = graphView
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

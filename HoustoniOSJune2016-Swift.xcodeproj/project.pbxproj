@@ -19,6 +19,9 @@
 		344634151D33219400641E0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 344634141D33219400641E0B /* Assets.xcassets */; };
 		344634181D33219400641E0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344634161D33219400641E0B /* LaunchScreen.storyboard */; };
 		345C967B1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345C967A1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift */; };
+		34B88B2D1D36878D00B2A100 /* Camera_Resouce in Resources */ = {isa = PBXBuildFile; fileRef = 34B88B2C1D36878D00B2A100 /* Camera_Resouce */; };
+		34B88B2F1D368B9500B2A100 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B88B2E1D368B9500B2A100 /* CameraViewController.swift */; };
+		34B88B311D3697B600B2A100 /* camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 34B88B301D3697B600B2A100 /* camera-icon.png */; };
 		34FCF84F1D33226600F65526 /* Swift-Exercise-1 in Resources */ = {isa = PBXBuildFile; fileRef = 34FCF84E1D33226600F65526 /* Swift-Exercise-1 */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		344634171D33219400641E0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		344634191D33219400641E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		345C967A1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsLessonViewController.swift; sourceTree = "<group>"; };
+		34B88B2C1D36878D00B2A100 /* Camera_Resouce */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Camera_Resouce; sourceTree = "<group>"; };
+		34B88B2E1D368B9500B2A100 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		34B88B301D3697B600B2A100 /* camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-icon.png"; sourceTree = "<group>"; };
 		34FCF84E1D33226600F65526 /* Swift-Exercise-1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Swift-Exercise-1"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,9 +87,10 @@
 		3446340C1D33219400641E0B /* HoustoniOSJune2016-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				34FCF84B1D3321B200F65526 /* Week 1 */,
+				34FCF84B1D3321B200F65526 /* Week 5 */,
 				3446340D1D33219400641E0B /* AppDelegate.swift */,
 				3446340F1D33219400641E0B /* ViewController.swift */,
+				34B88B301D3697B600B2A100 /* camera-icon.png */,
 				344634111D33219400641E0B /* Main.storyboard */,
 				344634141D33219400641E0B /* Assets.xcassets */,
 				344634161D33219400641E0B /* LaunchScreen.storyboard */,
@@ -104,14 +111,24 @@
 			name = CoreGraphicsLesson;
 			sourceTree = "<group>";
 		};
-		34FCF84B1D3321B200F65526 /* Week 1 */ = {
+		34B88B2B1D36877A00B2A100 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				34B88B2C1D36878D00B2A100 /* Camera_Resouce */,
+				34B88B2E1D368B9500B2A100 /* CameraViewController.swift */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		34FCF84B1D3321B200F65526 /* Week 5 */ = {
+			isa = PBXGroup;
+			children = (
+				34B88B2B1D36877A00B2A100 /* Camera */,
 				345C96791D344A89009BA1DB /* CoreGraphicsLesson */,
 				3432833C1D34056600621E14 /* HelloWorld */,
 				34FCF84D1D3321F600F65526 /* Playgrounds */,
 			);
-			name = "Week 1";
+			name = "Week 5";
 			sourceTree = "<group>";
 		};
 		34FCF84D1D3321F600F65526 /* Playgrounds */ = {
@@ -185,7 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				343B0F151D353230001B86DA /* Swift2Resource in Resources */,
+				34B88B311D3697B600B2A100 /* camera-icon.png in Resources */,
 				34FCF84F1D33226600F65526 /* Swift-Exercise-1 in Resources */,
+				34B88B2D1D36878D00B2A100 /* Camera_Resouce in Resources */,
 				344634181D33219400641E0B /* LaunchScreen.storyboard in Resources */,
 				344634151D33219400641E0B /* Assets.xcassets in Resources */,
 				343B0F1B1D35486F001B86DA /* GraphView-Resource in Resources */,
@@ -205,6 +224,7 @@
 				343B0F1D1D354912001B86DA /* GraphView.swift in Sources */,
 				344634101D33219400641E0B /* ViewController.swift in Sources */,
 				3446340E1D33219400641E0B /* AppDelegate.swift in Sources */,
+				34B88B2F1D368B9500B2A100 /* CameraViewController.swift in Sources */,
 				345C967B1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift in Sources */,
 				3432833E1D34057F00621E14 /* HelloWorldViewController.swift in Sources */,
 			);
