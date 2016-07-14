@@ -1,11 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hjb-0F-QZo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z20-WI-Xsr">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Core Motion View Controller-->
+        <scene sceneID="lv3-Pt-e8V">
+            <objects>
+                <viewController id="KvI-Zc-PJG" customClass="CoreMotionViewController" customModule="HoustoniOSJune2016_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VXv-9D-AUw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xxv-Ho-sYd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fMz-aU-kJc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBy-ot-jdW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="-659"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="tQw-WZ-q0U">
+            <objects>
+                <viewController id="VYc-zN-Ty3" customClass="FirstViewController" customModule="HoustoniOSJune2016_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sUE-fC-YHV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pag-63-fqi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LDf-ho-kE7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8Y-iu-iu7">
+                                <rect key="frame" x="235" y="285" width="131" height="30"/>
+                                <state key="normal" title="Go to Second View">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Tem-2R-SAh" kind="show" id="yJ5-Ou-yHu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.44070460560000002" blue="0.89761599430000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="x8Y-iu-iu7" firstAttribute="centerY" secondItem="LDf-ho-kE7" secondAttribute="centerY" id="aJF-5Q-jZU"/>
+                            <constraint firstItem="x8Y-iu-iu7" firstAttribute="centerX" secondItem="LDf-ho-kE7" secondAttribute="centerX" id="lkQ-un-2cu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OHg-va-0dx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wsU-5Z-WSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537" y="-1279"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="UYh-EN-PdI">
+            <objects>
+                <viewController id="Tem-2R-SAh" customClass="SecondViewController" customModule="HoustoniOSJune2016_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zzl-ex-7MM"/>
+                        <viewControllerLayoutGuide type="bottom" id="l45-1a-7bf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bIf-OY-w4N">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVb-VN-aEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2246" y="-1278"/>
+        </scene>
         <!--Camera View Controller-->
         <scene sceneID="HJX-wN-1vn">
             <objects>
@@ -155,6 +225,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbn-z2-LP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1150" y="341"/>
+        </scene>
+        <!--Fitness View Controller-->
+        <scene sceneID="f6l-bZ-HKq">
+            <objects>
+                <viewController id="Z20-WI-Xsr" customClass="FitnessViewController" customModule="HoustoniOSJune2016_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="63x-vx-NfK"/>
+                        <viewControllerLayoutGuide type="bottom" id="PXV-8g-rWP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lYA-n3-2JZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6d-4h-5Kq">
+                                <rect key="frame" x="261" y="285" width="78" height="30"/>
+                                <state key="normal" title="Query Data"/>
+                                <connections>
+                                    <action selector="queryPedometerDataButtonPressed" destination="Z20-WI-Xsr" eventType="touchUpInside" id="jyy-h6-3x2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J6d-4h-5Kq" firstAttribute="centerY" secondItem="lYA-n3-2JZ" secondAttribute="centerY" id="5L1-q0-pQa"/>
+                            <constraint firstItem="J6d-4h-5Kq" firstAttribute="centerX" secondItem="lYA-n3-2JZ" secondAttribute="centerX" id="pbV-zt-JSI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKn-uV-Bit" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="-1963"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Zt-Na-dcx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lCD-PZ-cfh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HK5-pE-sc7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VYc-zN-Ty3" kind="relationship" relationship="rootViewController" id="cpH-l6-ZPq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSr-4u-sY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="-1279"/>
         </scene>
     </scenes>
 </document>

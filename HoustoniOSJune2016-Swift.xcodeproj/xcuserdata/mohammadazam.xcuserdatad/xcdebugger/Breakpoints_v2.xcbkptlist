@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HoustoniOSJune2016-Swift/GraphView.swift"
-            timestampString = "490032856.018018"
+            filePath = "HoustoniOSJune2016-Swift/SecondViewController.swift"
+            timestampString = "490204652.729014"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "init(coder:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HoustoniOSJune2016-Swift/CameraViewController.swift"
-            timestampString = "490119519.981074"
+            filePath = "HoustoniOSJune2016-Swift/FitnessViewController.swift"
+            timestampString = "490204613.671035"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "queryPedometerDataButtonPressed()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -1,0 +1,78 @@
+//
+//  CoreMotionViewController.swift
+//  HoustoniOSJune2016-Swift
+//
+//  Created by Mohammad Azam on 7/13/16.
+//  Copyright © 2016 Mohammad Azam. All rights reserved.
+//
+
+import UIKit
+import CoreMotion
+
+class CoreMotionViewController: UIViewController {
+
+var manager :CMMotionManager!
+var imageView :UIImageView!
+
+override func viewDidLoad() {
+super.viewDidLoad()
+
+// add the image view control
+self.imageView = UIImageView(frame: CGRectMake(0, 0, 300, 300))
+// imageView.center = self.view.center
+self.imageView.image = UIImage(named: "camera-icon.png")
+
+self.view.addSubview(imageView)
+//
+self.manager = CMMotionManager()
+
+//self.manager.startDeviceMotionUpdates()
+
+if self.manager.deviceMotionAvailable {
+
+self.manager.deviceMotionUpdateInterval = 0.1
+
+self.manager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue(), withHandler: { (data :CMDeviceMotion?, error :NSError?) in
+
+if let gravity = data?.gravity {
+let rotation = atan2(gravity.x, gravity.y) - M_PI
+self.imageView.transform = CGAffineTransformMakeRotation(CGFloat(rotation))
+}
+
+})
+
+}
+
+/*
+if manager.accelerometerAvailable {
+manager.accelerometerUpdateInterval = 0.01
+manager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue()) {
+(data: CMAccelerometerData?, error: NSError?) in
+if let acceleration = data?.acceleration {
+let rotation = atan2(acceleration.x, acceleration.y) - M_PI
+imageView.transform = CGAffineTransformMakeRotation(CGFloat(rotation))
+}
+}
+}*/
+
+
+// Do any additional setup after loading the view.
+}
+
+override func didReceiveMemoryWarning() {
+super.didReceiveMemoryWarning()
+// Dispose of any resources that can be recreated.
+}
+
+
+/*
+// MARK: - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+// Get the new view controller using segue.destinationViewController.
+// Pass the selected object to the new view controller.
+}
+*/
+
+}
