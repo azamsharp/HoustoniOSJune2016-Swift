@@ -1,0 +1,62 @@
+create table customers
+(
+customerId integer primary key autoincrement,
+firstName varchar(50),
+lastName varchar(50),
+dateCreated datetime default current_timestamp,
+dateModified datetime default current_timestamp
+);
+
+create table addresses
+(
+addressId integer primary key autoincrement,
+street varchar(50),
+city varchar(50),
+state varchar(50),
+zipcode varchar(50),
+customerId integer not null,
+foreign key(customerId) references customer(customerId)
+)
+
+
+
+insert into customers(firstName,lastName)
+values('john','doe');
+
+insert into addresses(street,customerId)
+values('Richmond',1) ;
+
+
+
+
+select c.firstName,c.lastName, a.street from customers c
+join addresses a on c.customerId = a.customerid
+
+
+
+
+
+insert into Customers(firstName,lastName)
+values('John','Doe') ;
+
+insert into Customers(firstName,lastName,occupation)
+values('Mary','Kate','Software Developer') ;
+
+update Customers
+set occupation = 'Software Developer'
+where customerId = 1;
+
+update Customers
+set occupation = 'Business Analyist'
+where customerId = 2;
+
+select firstName,lastName,occupation from Customers
+where occupation = 'Software Developer'
+
+
+
+
+
+
+
+

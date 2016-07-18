@@ -131,9 +131,12 @@ class GraphView : UIView {
     override init(frame: CGRect) {
         
         super.init(frame: frame)
-        
         setup()
         
+    }
+    
+    override func drawRect(rect: CGRect) {
+        setup()
     }
     
     private func setup() {
@@ -154,15 +157,15 @@ class GraphView : UIView {
         for point in points {
             
             UIColor.greenColor().setFill()
-            let circle = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: 100, height: 100))
+            let circle = UIBezierPath(ovalInRect: CGRect(x: point.x, y: point.y, width: 20, height: 20))
             
             circle.fill()
             
-            line.addLineToPoint(point)
+           // line.addLineToPoint(point)
         }
         
-        line.stroke()
-        line.closePath()
+       // line.stroke()
+       // line.closePath()
         
     }
     
@@ -174,9 +177,56 @@ class GraphView : UIView {
 
 let graphView = GraphView(frame: CGRect(x: 0, y: 0, width: 500, height: 500))
 graphView.backgroundColor = UIColor.purpleColor()
-
-
 XCPlaygroundPage.currentPage.liveView = graphView
+
+let a = "hello world"
+
+
+print("hello world")
+print("hello world")
+print("hello world")
+print("hello world")
+print("hello world")
+print("hello world")
+print("hello world")
+print("hello world")
+print("hello world")
+print("hello world")
+
+for i in 1...50 {
+    print(i) 
+    print("hello world")
+}
+
+
+
+
+let customers = ["John","Mary","Alex"]
+
+for name in customers {
+    print(name)
+}
+
+let numbers = [1,2,3,5,4,34,21,234]
+
+class Cat {
+    
+}
+
+class Circle {
+    
+}
+
+for number in numbers {
+    
+    let cat = Cat()
+    //let circle = Circle(point)
+    
+    print(number)
+}
+
+
+
 
 
 
