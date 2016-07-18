@@ -1,22 +1,27 @@
-create table customers
-(
+create table Customers (
+
 customerId integer primary key autoincrement,
 firstName varchar(50),
 lastName varchar(50),
-dateCreated datetime default current_timestamp,
-dateModified datetime default current_timestamp
+occupation bit,
+dateCreated datetime
 );
 
-create table addresses
-(
+create table Addresses (
+
 addressId integer primary key autoincrement,
 street varchar(50),
 city varchar(50),
 state varchar(50),
-zipcode varchar(50),
-customerId integer not null,
-foreign key(customerId) references customer(customerId)
+customerId integer,
+foreign key(customerId) references Customers(customerId)
+
+
 )
+
+
+
+
 
 
 
