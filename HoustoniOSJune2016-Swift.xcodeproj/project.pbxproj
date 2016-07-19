@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		341E05191D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 341E05171D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodeld */; };
 		341E051B1D3E7E9F00E3ABCE /* GroceryCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E051A1D3E7E9F00E3ABCE /* GroceryCategoryTableViewController.swift */; };
+		341E051D1D3E8EC700E3ABCE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E051C1D3E8EC700E3ABCE /* CoreDataManager.swift */; };
 		3432833E1D34057F00621E14 /* HelloWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432833D1D34057F00621E14 /* HelloWorldViewController.swift */; };
 		343B0F151D353230001B86DA /* Swift2Resource in Resources */ = {isa = PBXBuildFile; fileRef = 343B0F141D353230001B86DA /* Swift2Resource */; };
 		343B0F171D354134001B86DA /* AvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B0F161D354134001B86DA /* AvailabilityViewController.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		341E05181D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroceryAppModel.xcdatamodel; sourceTree = "<group>"; };
 		341E051A1D3E7E9F00E3ABCE /* GroceryCategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryCategoryTableViewController.swift; sourceTree = "<group>"; };
+		341E051C1D3E8EC700E3ABCE /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		34227A5F1D349617007FFBCB /* Swift2-Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Swift2-Playground.playground"; sourceTree = "<group>"; };
 		3432833A1D33E76900621E14 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		3432833B1D3404AC00621E14 /* Swift-Exercise-Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Swift-Exercise-Playground.playground"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				341E05171D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodeld */,
 				341E051A1D3E7E9F00E3ABCE /* GroceryCategoryTableViewController.swift */,
+				341E051C1D3E8EC700E3ABCE /* CoreDataManager.swift */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				34B88B2F1D368B9500B2A100 /* CameraViewController.swift in Sources */,
 				3451F0FC1D37EBC4007E29F4 /* FitnessViewController.swift in Sources */,
 				345C967B1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift in Sources */,
+				341E051D1D3E8EC700E3ABCE /* CoreDataManager.swift in Sources */,
 				3432833E1D34057F00621E14 /* HelloWorldViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
