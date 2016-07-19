@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		341E05191D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 341E05171D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodeld */; };
+		341E051B1D3E7E9F00E3ABCE /* GroceryCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341E051A1D3E7E9F00E3ABCE /* GroceryCategoryTableViewController.swift */; };
 		3432833E1D34057F00621E14 /* HelloWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3432833D1D34057F00621E14 /* HelloWorldViewController.swift */; };
 		343B0F151D353230001B86DA /* Swift2Resource in Resources */ = {isa = PBXBuildFile; fileRef = 343B0F141D353230001B86DA /* Swift2Resource */; };
 		343B0F171D354134001B86DA /* AvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343B0F161D354134001B86DA /* AvailabilityViewController.swift */; };
@@ -25,6 +27,7 @@
 		3451F0FA1D37E41D007E29F4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3451F0F91D37E41D007E29F4 /* SecondViewController.swift */; };
 		3451F0FC1D37EBC4007E29F4 /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3451F0FB1D37EBC4007E29F4 /* FitnessViewController.swift */; };
 		345C967B1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345C967A1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift */; };
+		3471288C1D3D4E41008DD580 /* TileToScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471288B1D3D4E41008DD580 /* TileToScrollViewController.swift */; };
 		34AE22441D3D3FD5008499A9 /* SQL_BASICS in Resources */ = {isa = PBXBuildFile; fileRef = 34AE22431D3D3FD5008499A9 /* SQL_BASICS */; };
 		34B88B2D1D36878D00B2A100 /* Camera_Resouce in Resources */ = {isa = PBXBuildFile; fileRef = 34B88B2C1D36878D00B2A100 /* Camera_Resouce */; };
 		34B88B2F1D368B9500B2A100 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B88B2E1D368B9500B2A100 /* CameraViewController.swift */; };
@@ -33,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		341E05181D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GroceryAppModel.xcdatamodel; sourceTree = "<group>"; };
+		341E051A1D3E7E9F00E3ABCE /* GroceryCategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryCategoryTableViewController.swift; sourceTree = "<group>"; };
 		34227A5F1D349617007FFBCB /* Swift2-Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Swift2-Playground.playground"; sourceTree = "<group>"; };
 		3432833A1D33E76900621E14 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		3432833B1D3404AC00621E14 /* Swift-Exercise-Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Swift-Exercise-Playground.playground"; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		3451F0F91D37E41D007E29F4 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3451F0FB1D37EBC4007E29F4 /* FitnessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
 		345C967A1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsLessonViewController.swift; sourceTree = "<group>"; };
+		3471288B1D3D4E41008DD580 /* TileToScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileToScrollViewController.swift; sourceTree = "<group>"; };
 		34AE22431D3D3FD5008499A9 /* SQL_BASICS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SQL_BASICS; sourceTree = "<group>"; };
 		34B88B2C1D36878D00B2A100 /* Camera_Resouce */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Camera_Resouce; sourceTree = "<group>"; };
 		34B88B2E1D368B9500B2A100 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		341E05141D3E695C00E3ABCE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				341E05171D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodeld */,
+				341E051A1D3E7E9F00E3ABCE /* GroceryCategoryTableViewController.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		3432833C1D34056600621E14 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +145,7 @@
 		34AE22411D3D3FBD008499A9 /* Week 6 */ = {
 			isa = PBXGroup;
 			children = (
+				341E05141D3E695C00E3ABCE /* CoreData */,
 				34AE22421D3D3FC4008499A9 /* SQL Basics */,
 			);
 			name = "Week 6";
@@ -160,6 +176,7 @@
 				3451F0F71D37E40B007E29F4 /* FirstViewController.swift */,
 				3451F0F91D37E41D007E29F4 /* SecondViewController.swift */,
 				3451F0FB1D37EBC4007E29F4 /* FitnessViewController.swift */,
+				3471288B1D3D4E41008DD580 /* TileToScrollViewController.swift */,
 			);
 			name = CoreMotion;
 			sourceTree = "<group>";
@@ -268,10 +285,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3451F0FA1D37E41D007E29F4 /* SecondViewController.swift in Sources */,
+				341E05191D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodeld in Sources */,
+				341E051B1D3E7E9F00E3ABCE /* GroceryCategoryTableViewController.swift in Sources */,
 				343B0F191D35452B001B86DA /* String+Additions.swift in Sources */,
 				343B0F171D354134001B86DA /* AvailabilityViewController.swift in Sources */,
 				3451F0F61D37DB08007E29F4 /* CoreMotionViewController.swift in Sources */,
 				343B0F1D1D354912001B86DA /* GraphView.swift in Sources */,
+				3471288C1D3D4E41008DD580 /* TileToScrollViewController.swift in Sources */,
 				344634101D33219400641E0B /* ViewController.swift in Sources */,
 				3451F0F81D37E40B007E29F4 /* FirstViewController.swift in Sources */,
 				3446340E1D33219400641E0B /* AppDelegate.swift in Sources */,
@@ -439,6 +459,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		341E05171D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				341E05181D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodel */,
+			);
+			currentVersion = 341E05181D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodel */;
+			path = GroceryAppModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 344634021D33219400641E0B /* Project object */;
 }
