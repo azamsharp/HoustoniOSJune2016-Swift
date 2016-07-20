@@ -12,7 +12,6 @@ import CoreData
 class GroceryCategoryTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var managedObjectContext :NSManagedObjectContext!
-    
     var fetchedResultsController :NSFetchedResultsController!
     
     override func viewDidLoad() {
@@ -30,12 +29,34 @@ class GroceryCategoryTableViewController: UITableViewController, NSFetchedResult
 
     @IBAction func addNewGroceryCategory() {
         
-        let groceryCategory = NSEntityDescription.insertNewObjectForEntityForName("GroceryCategory", inManagedObjectContext: self.managedObjectContext)
+        guard let groceryCategory = NSEntityDescription.insertNewObjectForEntityForName("GroceryCategory", inManagedObjectContext: self.managedObjectContext) as? GroceryCategory else {
+            fatalError("GroceryCategory does not exist")
+        }
         
-        groceryCategory.setValue("Dinner", forKey: "title")
+        groceryCategory.title = "Breakfast"
+        
+        //groceryCategory.setValue("Dinner", forKey: "title")
         
         try! self.managedObjectContext.save()
 
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        guard let indexPath = self.tableView.indexPathForSelectedRow else {
+            fatalError("Invalid IndexPath")
+        }
+        
+        let groceryCategory = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+        
+        
+        guard let groceryItemsTableViewController = segue.destinationViewController as? GroceryItemTableViewController else {
+            fatalError("Destination controller not found")
+        }
+        
+        groceryItemsTableViewController.groceryCategory = groceryCategory
+        groceryItemsTableViewController.managedObjectContext = self.managedObjectContext
+        
     }
     
     func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
@@ -87,9 +108,11 @@ class GroceryCategoryTableViewController: UITableViewController, NSFetchedResult
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
-         let groceryCategory = self.fetchedResultsController.objectAtIndexPath(indexPath)
+        guard let groceryCategory = self.fetchedResultsController.objectAtIndexPath(indexPath) as? GroceryCategory else {
+            fatalError("Error getting GroceryCategory")
+        }
         
-        cell.textLabel?.text = groceryCategory.valueForKey("title") as? String
+        cell.textLabel?.text = groceryCategory.title
         
         // Configure the cell...
 

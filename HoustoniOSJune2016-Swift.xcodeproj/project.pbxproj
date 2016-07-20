@@ -29,6 +29,9 @@
 		3451F0FC1D37EBC4007E29F4 /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3451F0FB1D37EBC4007E29F4 /* FitnessViewController.swift */; };
 		345C967B1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345C967A1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift */; };
 		3471288C1D3D4E41008DD580 /* TileToScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471288B1D3D4E41008DD580 /* TileToScrollViewController.swift */; };
+		349CFF8E1D3FB87B00F7298B /* CoreData_Resource in Resources */ = {isa = PBXBuildFile; fileRef = 349CFF8D1D3FB87B00F7298B /* CoreData_Resource */; };
+		349CFF901D3FC9C500F7298B /* GroceryItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CFF8F1D3FC9C500F7298B /* GroceryItemTableViewController.swift */; };
+		349CFF921D3FDAAC00F7298B /* GroceryCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CFF911D3FDAAC00F7298B /* GroceryCategory.swift */; };
 		34AE22441D3D3FD5008499A9 /* SQL_BASICS in Resources */ = {isa = PBXBuildFile; fileRef = 34AE22431D3D3FD5008499A9 /* SQL_BASICS */; };
 		34B88B2D1D36878D00B2A100 /* Camera_Resouce in Resources */ = {isa = PBXBuildFile; fileRef = 34B88B2C1D36878D00B2A100 /* Camera_Resouce */; };
 		34B88B2F1D368B9500B2A100 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B88B2E1D368B9500B2A100 /* CameraViewController.swift */; };
@@ -64,6 +67,10 @@
 		3451F0FB1D37EBC4007E29F4 /* FitnessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
 		345C967A1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsLessonViewController.swift; sourceTree = "<group>"; };
 		3471288B1D3D4E41008DD580 /* TileToScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileToScrollViewController.swift; sourceTree = "<group>"; };
+		349CFF8D1D3FB87B00F7298B /* CoreData_Resource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CoreData_Resource; sourceTree = "<group>"; };
+		349CFF8F1D3FC9C500F7298B /* GroceryItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemTableViewController.swift; sourceTree = "<group>"; };
+		349CFF911D3FDAAC00F7298B /* GroceryCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryCategory.swift; sourceTree = "<group>"; };
+		349CFF931D3FDEF000F7298B /* GroceryAppModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GroceryAppModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		34AE22431D3D3FD5008499A9 /* SQL_BASICS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SQL_BASICS; sourceTree = "<group>"; };
 		34B88B2C1D36878D00B2A100 /* Camera_Resouce */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Camera_Resouce; sourceTree = "<group>"; };
 		34B88B2E1D368B9500B2A100 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +95,9 @@
 				341E05171D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodeld */,
 				341E051A1D3E7E9F00E3ABCE /* GroceryCategoryTableViewController.swift */,
 				341E051C1D3E8EC700E3ABCE /* CoreDataManager.swift */,
+				349CFF8D1D3FB87B00F7298B /* CoreData_Resource */,
+				349CFF8F1D3FC9C500F7298B /* GroceryItemTableViewController.swift */,
+				349CFF911D3FDAAC00F7298B /* GroceryCategory.swift */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -273,6 +283,7 @@
 				34B88B2D1D36878D00B2A100 /* Camera_Resouce in Resources */,
 				344634181D33219400641E0B /* LaunchScreen.storyboard in Resources */,
 				3451F0F41D37D4F3007E29F4 /* TIY-logo-thumb.jpg in Resources */,
+				349CFF8E1D3FB87B00F7298B /* CoreData_Resource in Resources */,
 				344634151D33219400641E0B /* Assets.xcassets in Resources */,
 				34AE22441D3D3FD5008499A9 /* SQL_BASICS in Resources */,
 				343B0F1B1D35486F001B86DA /* GraphView-Resource in Resources */,
@@ -288,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3451F0FA1D37E41D007E29F4 /* SecondViewController.swift in Sources */,
+				349CFF921D3FDAAC00F7298B /* GroceryCategory.swift in Sources */,
 				341E05191D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodeld in Sources */,
 				341E051B1D3E7E9F00E3ABCE /* GroceryCategoryTableViewController.swift in Sources */,
 				343B0F191D35452B001B86DA /* String+Additions.swift in Sources */,
@@ -299,6 +311,7 @@
 				3451F0F81D37E40B007E29F4 /* FirstViewController.swift in Sources */,
 				3446340E1D33219400641E0B /* AppDelegate.swift in Sources */,
 				34B88B2F1D368B9500B2A100 /* CameraViewController.swift in Sources */,
+				349CFF901D3FC9C500F7298B /* GroceryItemTableViewController.swift in Sources */,
 				3451F0FC1D37EBC4007E29F4 /* FitnessViewController.swift in Sources */,
 				345C967B1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift in Sources */,
 				341E051D1D3E8EC700E3ABCE /* CoreDataManager.swift in Sources */,
@@ -468,9 +481,10 @@
 		341E05171D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				349CFF931D3FDEF000F7298B /* GroceryAppModel 2.xcdatamodel */,
 				341E05181D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodel */,
 			);
-			currentVersion = 341E05181D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodel */;
+			currentVersion = 349CFF931D3FDEF000F7298B /* GroceryAppModel 2.xcdatamodel */;
 			path = GroceryAppModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

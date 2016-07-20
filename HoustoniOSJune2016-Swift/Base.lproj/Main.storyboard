@@ -269,6 +269,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="SfJ-Gw-E8G" kind="show" id="Q9G-Im-Hq6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -286,7 +289,42 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJY-yz-c1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1347" y="-2959"/>
+            <point key="canvasLocation" x="1251" y="-3175"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="yFZ-DH-ZZY">
+            <objects>
+                <tableViewController id="SfJ-Gw-E8G" customClass="GroceryItemTableViewController" customModule="HoustoniOSJune2016_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FlV-Z2-Vm3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="g8D-SM-OcD">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g8D-SM-OcD" id="3Bk-tW-RUg">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SfJ-Gw-E8G" id="PYR-BX-5SO"/>
+                            <outlet property="delegate" destination="SfJ-Gw-E8G" id="ky3-rw-JuN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="qER-3K-l8L">
+                        <barButtonItem key="rightBarButtonItem" title="Add Grocery Item" id="XBq-gP-wo8">
+                            <connections>
+                                <action selector="addGroceryItem" destination="SfJ-Gw-E8G" id="27U-Xi-xxu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mba-T0-x8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2029" y="-3181"/>
         </scene>
         <!--Fitness View Controller-->
         <scene sceneID="f6l-bZ-HKq">
@@ -353,7 +391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E19-LY-4b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2299" y="-2652"/>
+            <point key="canvasLocation" x="2297" y="-2282"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Zt-Na-dcx">
@@ -389,7 +427,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZg-C0-u4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="535" y="-2959"/>
+            <point key="canvasLocation" x="523" y="-3181"/>
         </scene>
     </scenes>
 </document>

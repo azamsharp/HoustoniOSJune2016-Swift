@@ -39,7 +39,10 @@ class CoreDataManager: NSObject {
         
         print(storeURL)
         
-        try! persistentStoreCoordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil)
+        let options = [NSMigratePersistentStoresAutomaticallyOption: true,
+                       NSInferMappingModelAutomaticallyOption: true]
+        
+        try! persistentStoreCoordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: options)
         
         let type = NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType
         
