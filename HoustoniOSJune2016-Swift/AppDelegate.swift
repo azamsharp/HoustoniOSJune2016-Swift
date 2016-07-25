@@ -18,18 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let coreDataManager = CoreDataManager()
-        self.managedObjectContext = coreDataManager.managedObjectContext
-        
-        guard let navigationController = self.window?.rootViewController as? UINavigationController else {
-            fatalError("RootViewController not found")
-        }
-        
-        guard let groceryCategoryTableViewController = navigationController.viewControllers.first as? GroceryCategoryTableViewController else {
-            fatalError("Controller not found")
-        }
-        
-        groceryCategoryTableViewController.managedObjectContext = self.managedObjectContext
+//        let coreDataManager = CoreDataManager()
+//        self.managedObjectContext = coreDataManager.managedObjectContext
+//        
+//        guard let navigationController = self.window?.rootViewController as? UINavigationController else {
+//            fatalError("RootViewController not found")
+//        }
+//        
+//        guard let groceryCategoryTableViewController = navigationController.viewControllers.first as? GroceryCategoryTableViewController else {
+//            fatalError("Controller not found")
+//        }
+//        
+//        groceryCategoryTableViewController.managedObjectContext = self.managedObjectContext
         
         
         return true

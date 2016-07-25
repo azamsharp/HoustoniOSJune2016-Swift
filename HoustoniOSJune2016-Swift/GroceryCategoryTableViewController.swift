@@ -35,6 +35,7 @@ class GroceryCategoryTableViewController: UITableViewController, NSFetchedResult
         
         groceryCategory.title = "Breakfast"
         
+        
         //groceryCategory.setValue("Dinner", forKey: "title")
         
         try! self.managedObjectContext.save()
@@ -47,8 +48,9 @@ class GroceryCategoryTableViewController: UITableViewController, NSFetchedResult
             fatalError("Invalid IndexPath")
         }
         
-        let groceryCategory = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
-        
+        guard let groceryCategory = self.fetchedResultsController.objectAtIndexPath(indexPath) as? GroceryCategory else {
+            fatalError("GroceryCategory not found")
+        }
         
         guard let groceryItemsTableViewController = segue.destinationViewController as? GroceryItemTableViewController else {
             fatalError("Destination controller not found")

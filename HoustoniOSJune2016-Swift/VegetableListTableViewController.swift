@@ -1,57 +1,69 @@
 //
-//  GroceryItemTableViewController.swift
+//  VegetableListTableViewController.swift
 //  HoustoniOSJune2016-Swift
 //
-//  Created by Mohammad Azam on 7/20/16.
+//  Created by Mohammad Azam on 7/25/16.
 //  Copyright © 2016 Mohammad Azam. All rights reserved.
 //
 
 import UIKit
-import CoreData
 
-class GroceryItemTableViewController: UITableViewController {
+class VegetableListTableViewController: UITableViewController {
 
-    var managedObjectContext :NSManagedObjectContext!
-    var groceryCategory :GroceryCategory!
+    var vegetables = [Vegetable]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // groceryCategory.title
+       
+        populateVegetables()
         
-        self.title = groceryCategory.valueForKey("title") as? String
         
-        let groceryItems = self.groceryCategory.groceryItems
-
-        for item in groceryItems {
-            print(item.title)
+    }
+    
+    private func populateVegetables() {
+        
+        let vegetableAPI = "http://jsonplaceholder.typicode.com/photos"
+        
+        guard let url = NSURL(string: vegetableAPI) else {
+            fatalError("Invalid URL")
         }
         
-    
+        let session = NSURLSession.sharedSession()
+        
+        
+        session.dataTaskWithURL(url) { (data :NSData?, response :NSURLResponse?, error :NSError?) in
+            
+            guard let jsonResult = NSString(data: data!, encoding: NSUTF8StringEncoding) else {
+                fatalError("Unable to format data")
+            }
+            
+            let jsonVegetablesArray = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! [AnyObject]
+            
+            
+            for item in jsonVegetablesArray {
+                
+                let vegetable = Vegetable()
+                vegetable.title = item.valueForKey("title") as! String
+                vegetable.thumbnailUrl = item.valueForKey("thumbnailUrl") as! String
+                
+                self.vegetables.append(vegetable)
+                
+            }
+            
+            // loop ended I can refresh the tableview 
+            dispatch_async(dispatch_get_main_queue(), { 
+                // this is the main/ui thread 
+                self.tableView.reloadData()
+                
+            })
+            
+           
+            
+        }.resume()
+        
     }
 
-    @IBAction func addGroceryItem() {
-        
-        
-        
-        let groceryItem = NSEntityDescription.insertNewObjectForEntityForName("GroceryItem", inManagedObjectContext: self.managedObjectContext)
-        
-        
-   //      groceryItem.Title = "Cookies"
-        
-        groceryItem.setValue("Cookies", forKey: "title")
-        
-        //groceryCategory.valueForKey("groceryItems")
-        
-        let groceryItems = groceryCategory.mutableSetValueForKey("groceryItems")
-        // NSSet
-        
-        groceryItems.addObject(groceryItem)
-        
-        try! self.managedObjectContext.save()
-        
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,23 +73,38 @@ class GroceryItemTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.vegetables.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+       
+        let cell = tableView.dequeueReusableCellWithIdentifier("VegetableCell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let vegetable = self.vegetables[indexPath.row]
+        
+        guard let imageURL = NSURL(string: vegetable.thumbnailUrl) else {
+            fatalError("Invalid URL")
+        }
+        
+        let imageData = NSData(contentsOfURL: imageURL)
+        
+        let image = UIImage(data: imageData!)
+        
+        cell.imageView?.image = image
+        
+        print(vegetable.thumbnailUrl)
+        
+        cell.textLabel?.text = vegetable.title
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

@@ -1,0 +1,16 @@
+let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+
+dispatch_async(queue) {
+
+let imageData = NSData(contentsOfURL: url)
+dispatch_async(dispatch_get_main_queue(), {
+cell.imageView!.image = UIImage(data: imageData!)
+})
+
+}
+
+
+
+https://zillow.api.com/fetch/listings/zipcode=77066
+
+https://zillow.api.com/fetch/listings/zipcode=77066&propertyId=1234

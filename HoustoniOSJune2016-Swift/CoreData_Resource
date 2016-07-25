@@ -1,2 +1,9 @@
 let options = [NSMigratePersistentStoresAutomaticallyOption: true,
 NSInferMappingModelAutomaticallyOption: true]
+
+
+
+protocol AddEntryDelegate : class {
+
+}
+

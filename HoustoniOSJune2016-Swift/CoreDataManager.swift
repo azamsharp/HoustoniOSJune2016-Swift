@@ -9,11 +9,16 @@
 import UIKit
 import CoreData
 
+protocol AddEntryDelegate : class  {
+    
+}
+
 class CoreDataManager: NSObject {
 
     var managedObjectContext :NSManagedObjectContext!
     
     override init() {
+        
         
         guard let url = NSBundle.mainBundle().URLForResource("GroceryAppModel", withExtension: "momd") else {
             fatalError("GroceryAppModel not found")
