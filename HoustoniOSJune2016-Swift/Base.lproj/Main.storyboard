@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HsM-xP-DCA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="u45-Au-tEL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -266,7 +266,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f8S-XL-key" id="xfs-6v-MH1">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -343,7 +343,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mMP-vv-bfS" id="bGx-Qa-yC1">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -372,7 +372,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g8D-SM-OcD" id="3Bk-tW-RUg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -497,6 +497,64 @@
             </objects>
             <point key="canvasLocation" x="523" y="-3181"/>
         </scene>
+        <!--Maps View Controller-->
+        <scene sceneID="G56-io-Fj3">
+            <objects>
+                <viewController id="u45-Au-tEL" customClass="MapsViewController" customModule="HoustoniOSJune2016_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hEZ-HK-pNx"/>
+                        <viewControllerLayoutGuide type="bottom" id="OOJ-Po-2Gb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1rE-Il-WbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YfC-fB-BYo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="543"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLO-ki-dyv">
+                                <rect key="frame" x="247" y="562" width="107" height="30"/>
+                                <state key="normal" title="Add Annotation"/>
+                                <connections>
+                                    <action selector="addAnnotationButtonPressed" destination="u45-Au-tEL" eventType="touchUpInside" id="dw7-pe-ewN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YfC-fB-BYo" firstAttribute="leading" secondItem="1rE-Il-WbZ" secondAttribute="leading" id="Do7-2Z-HbR"/>
+                            <constraint firstItem="gLO-ki-dyv" firstAttribute="top" secondItem="YfC-fB-BYo" secondAttribute="bottom" constant="19" id="QIf-of-IaJ"/>
+                            <constraint firstItem="YfC-fB-BYo" firstAttribute="top" secondItem="1rE-Il-WbZ" secondAttribute="top" id="T8U-XC-fW3"/>
+                            <constraint firstItem="OOJ-Po-2Gb" firstAttribute="top" secondItem="gLO-ki-dyv" secondAttribute="bottom" constant="8" symbolic="YES" id="dV6-jo-eX2"/>
+                            <constraint firstItem="YfC-fB-BYo" firstAttribute="centerX" secondItem="gLO-ki-dyv" secondAttribute="centerX" id="pAu-C8-Vxh"/>
+                            <constraint firstAttribute="trailing" secondItem="YfC-fB-BYo" secondAttribute="trailing" id="tz2-Dn-iya"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ironYardView" destination="rqo-Xs-Fk8" id="iC1-lA-wyK"/>
+                        <outlet property="mapView" destination="YfC-fB-BYo" id="F4F-Wv-kWa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OGG-FE-Y42" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="eVv-02-EbL">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TIY-logo-thumb.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-Xs-Fk8">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="rqo-Xs-Fk8" secondAttribute="trailing" id="5YK-4z-oge"/>
+                        <constraint firstItem="rqo-Xs-Fk8" firstAttribute="leading" secondItem="eVv-02-EbL" secondAttribute="leading" id="anG-pY-QEA"/>
+                        <constraint firstAttribute="bottom" secondItem="rqo-Xs-Fk8" secondAttribute="bottom" id="l3e-nt-isR"/>
+                        <constraint firstItem="rqo-Xs-Fk8" firstAttribute="top" secondItem="eVv-02-EbL" secondAttribute="top" id="wF1-rI-yrv"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="557" y="-6213"/>
+        </scene>
         <!--Posting Data View Controller-->
         <scene sceneID="g5L-iM-C83">
             <objects>
@@ -547,4 +605,7 @@
             <point key="canvasLocation" x="1849" y="-4721"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TIY-logo-thumb.jpg" width="500" height="500"/>
+    </resources>
 </document>

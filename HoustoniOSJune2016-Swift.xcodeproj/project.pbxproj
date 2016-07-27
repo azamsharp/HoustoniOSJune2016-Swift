@@ -29,6 +29,10 @@
 		3451F0FC1D37EBC4007E29F4 /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3451F0FB1D37EBC4007E29F4 /* FitnessViewController.swift */; };
 		345C967B1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345C967A1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift */; };
 		3471288C1D3D4E41008DD580 /* TileToScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471288B1D3D4E41008DD580 /* TileToScrollViewController.swift */; };
+		34943B1C1D484D0500CF1F29 /* pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 34943B1B1D484D0500CF1F29 /* pizza.png */; };
+		34943B1E1D485A7100CF1F29 /* Maps_Resource in Resources */ = {isa = PBXBuildFile; fileRef = 34943B1D1D485A7100CF1F29 /* Maps_Resource */; };
+		34943B201D49001200CF1F29 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34943B1F1D49001200CF1F29 /* MapsViewController.swift */; };
+		34943B221D490D1C00CF1F29 /* PizzaAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34943B211D490D1C00CF1F29 /* PizzaAnnotationView.swift */; };
 		349CFF8E1D3FB87B00F7298B /* CoreData_Resource in Resources */ = {isa = PBXBuildFile; fileRef = 349CFF8D1D3FB87B00F7298B /* CoreData_Resource */; };
 		349CFF901D3FC9C500F7298B /* GroceryItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CFF8F1D3FC9C500F7298B /* GroceryItemTableViewController.swift */; };
 		349CFF921D3FDAAC00F7298B /* GroceryCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CFF911D3FDAAC00F7298B /* GroceryCategory.swift */; };
@@ -73,6 +77,10 @@
 		3451F0FB1D37EBC4007E29F4 /* FitnessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
 		345C967A1D344AA0009BA1DB /* CoreGraphicsLessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreGraphicsLessonViewController.swift; sourceTree = "<group>"; };
 		3471288B1D3D4E41008DD580 /* TileToScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileToScrollViewController.swift; sourceTree = "<group>"; };
+		34943B1B1D484D0500CF1F29 /* pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza.png; sourceTree = "<group>"; };
+		34943B1D1D485A7100CF1F29 /* Maps_Resource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Maps_Resource; sourceTree = "<group>"; };
+		34943B1F1D49001200CF1F29 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		34943B211D490D1C00CF1F29 /* PizzaAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaAnnotationView.swift; sourceTree = "<group>"; };
 		349CFF8D1D3FB87B00F7298B /* CoreData_Resource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CoreData_Resource; sourceTree = "<group>"; };
 		349CFF8F1D3FC9C500F7298B /* GroceryItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemTableViewController.swift; sourceTree = "<group>"; };
 		349CFF911D3FDAAC00F7298B /* GroceryCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryCategory.swift; sourceTree = "<group>"; };
@@ -169,6 +177,17 @@
 			name = CoreGraphicsLesson;
 			sourceTree = "<group>";
 		};
+		34943B161D482EFF00CF1F29 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				34943B1B1D484D0500CF1F29 /* pizza.png */,
+				34943B1D1D485A7100CF1F29 /* Maps_Resource */,
+				34943B1F1D49001200CF1F29 /* MapsViewController.swift */,
+				34943B211D490D1C00CF1F29 /* PizzaAnnotationView.swift */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
 		34AE22411D3D3FBD008499A9 /* Week 6 */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +217,7 @@
 		34CF6D2D1D46515C002CAFE7 /* Week 7 */ = {
 			isa = PBXGroup;
 			children = (
+				34943B161D482EFF00CF1F29 /* Maps */,
 				34CF6D2E1D46517C002CAFE7 /* Week7_Resource */,
 				34CF6D301D465FA1002CAFE7 /* ProgressIndicatorViewController.swift */,
 				34CF6D321D46648E002CAFE7 /* VegetableListTableViewController.swift */,
@@ -304,6 +324,7 @@
 			files = (
 				343B0F151D353230001B86DA /* Swift2Resource in Resources */,
 				34B88B311D3697B600B2A100 /* camera-icon.png in Resources */,
+				34943B1C1D484D0500CF1F29 /* pizza.png in Resources */,
 				34FCF84F1D33226600F65526 /* Swift-Exercise-1 in Resources */,
 				3451F0F11D37CC83007E29F4 /* CoreMotion_Resource in Resources */,
 				34B88B2D1D36878D00B2A100 /* Camera_Resouce in Resources */,
@@ -312,6 +333,7 @@
 				349CFF8E1D3FB87B00F7298B /* CoreData_Resource in Resources */,
 				344634151D33219400641E0B /* Assets.xcassets in Resources */,
 				34AE22441D3D3FD5008499A9 /* SQL_BASICS in Resources */,
+				34943B1E1D485A7100CF1F29 /* Maps_Resource in Resources */,
 				34CF6D2F1D46517C002CAFE7 /* Week7_Resource in Resources */,
 				343B0F1B1D35486F001B86DA /* GraphView-Resource in Resources */,
 				344634131D33219400641E0B /* Main.storyboard in Resources */,
@@ -328,11 +350,13 @@
 				3451F0FA1D37E41D007E29F4 /* SecondViewController.swift in Sources */,
 				349CFF921D3FDAAC00F7298B /* GroceryCategory.swift in Sources */,
 				341E05191D3E74BC00E3ABCE /* GroceryAppModel.xcdatamodeld in Sources */,
+				34943B201D49001200CF1F29 /* MapsViewController.swift in Sources */,
 				341E051B1D3E7E9F00E3ABCE /* GroceryCategoryTableViewController.swift in Sources */,
 				343B0F191D35452B001B86DA /* String+Additions.swift in Sources */,
 				343B0F171D354134001B86DA /* AvailabilityViewController.swift in Sources */,
 				34CF6D331D46648E002CAFE7 /* VegetableListTableViewController.swift in Sources */,
 				3451F0F61D37DB08007E29F4 /* CoreMotionViewController.swift in Sources */,
+				34943B221D490D1C00CF1F29 /* PizzaAnnotationView.swift in Sources */,
 				343B0F1D1D354912001B86DA /* GraphView.swift in Sources */,
 				3471288C1D3D4E41008DD580 /* TileToScrollViewController.swift in Sources */,
 				344634101D33219400641E0B /* ViewController.swift in Sources */,

@@ -12,16 +12,29 @@ class VegetableListTableViewController: UITableViewController {
 
     var vegetables = [Vegetable]()
     
+    var countLabel :UILabel = UILabel()
+    
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
        
         populateVegetables()
         
-        
     }
     
+    func buttonPressed(button :UIButton) {
+        
+        count += 1
+        
+        
+        
+           }
+    
     private func populateVegetables() {
+        
+        
         
         let vegetableAPI = "http://jsonplaceholder.typicode.com/photos"
         
